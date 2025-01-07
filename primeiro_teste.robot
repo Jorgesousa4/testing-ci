@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${URL}    http://wdatecnologia.com.br/novo/
-${TEXT}    Início 
+${TEXT}    Mercado que atuamos 
 
 
 *** Test Cases ***
@@ -15,9 +15,7 @@ Abrir Página Exemplo
 Verificar Texto Visivel
     ${chrome_options}=    Create Chrome Options
     Open Browser    ${URL}    chrome    options=${chrome_options}
-    ${element}=    Get Text    css=h2
-    ${element}=    Replace    ${element}    &amp;    &
-    Should Be Equal As Strings    ${element}    Bem vindo a WDA Tecnologia & Inovação.
+    Element Should Be Visible    ${TEXT}
     [Teardown]    Close Browser
 
 *** Keywords ***
