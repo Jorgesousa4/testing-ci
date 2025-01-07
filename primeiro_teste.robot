@@ -3,8 +3,8 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${URL}    http://www.wdatecnologia.com.br/index.php
-${TEXT}    Mercado que atuamos 
-
+${SESSION1}    Nossos Serviços 
+${SESSION2}    Mercado que atuamos 
 
 *** Test Cases ***
 Abrir Página Exemplo
@@ -15,13 +15,13 @@ Abrir Página Exemplo
 Verificar Seção de Nossos Serviços Visivel
     ${chrome_options}=    Create Chrome Options
     Open Browser    ${URL}    chrome    options=${chrome_options}
-    Page Should Contain    Nossos Serviços
+    Page Should Contain    ${SESSION1}
     [Teardown]    Close Browser
 
 Verificar Seção de Mercado em que atuamos Visivel
     ${chrome_options}=    Create Chrome Options
     Open Browser    ${URL}    chrome    options=${chrome_options}
-    Page Should Contain    Mercado em que atuamos
+    Page Should Contain    ${SESSION2}
     [Teardown]    Close Browser
 
 *** Keywords ***
