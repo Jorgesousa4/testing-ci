@@ -7,6 +7,7 @@ ${BROWSER}    Chrome
 
 *** Test Cases ***
 Abrir Página Exemplo
-    Create WebDriver    Chrome    --headless    --disable-gpu    --no-sandbox    --disable-dev-shm-usage
+    ${options}=    Create Dictionary    options=--headless --disable-gpu --no-sandbox --disable-dev-shm-usage
+    Create WebDriver    Chrome    options=${options}
     Go To    ${URL}
     Close Browser
