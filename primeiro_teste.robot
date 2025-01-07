@@ -1,13 +1,13 @@
 *** Settings ***
 Library    SeleniumLibrary
 
-*** Variables ***
-${URL}     https://google.com.br
-${BROWSER}    Chrome
-
 *** Test Cases ***
 Abrir Página Exemplo
-    # Create headless Chrome browser with options
-    ${driver} =    Create WebDriver    ${BROWSER}    options={ headless=True, disable_gpu=True, no_sandbox=True, disable_dev_shm_usage=True }
-    Go To    ${URL}
+    ${driver} =    Create WebDriver    Chrome
+    # Verifique se o driver foi criado corretamente
+    Log To Console    Tipo do driver: ${type(driver)}
+    # Acesse o atributo capabilities
+    ${capabilities} =    Get WebDriver Capabilities    ${driver}
+    Log To Console    Capabilities: ${capabilities}
+    Go To    https://google.com.br
     Close Browser
