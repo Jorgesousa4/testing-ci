@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.4 on darwin)" generated="2025-01-06T21:03:15.118243" rpa="false" schemaversion="5">
+<suite id="s1" name="Primeiro Teste" source="/Users/jorgesousa/Desktop/Robot testing/primeiro_teste.robot">
+<test id="s1-t1" name="Abrir Página Exemplo" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-06T21:03:15.200338" level="INFO">Opening browser 'Chrome' to base url 'https://google.com.br'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-06T21:03:15.200202" elapsed="6.609575"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-06T21:03:21.812309" elapsed="0.086474"/>
+</kw>
+<status status="PASS" start="2025-01-06T21:03:15.199776" elapsed="6.699532"/>
+</test>
+<status status="PASS" start="2025-01-06T21:03:15.118782" elapsed="6.780835"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Primeiro Teste">Primeiro Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
