@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 *** Variables ***
 ${URL}    http://www.wdatecnologia.com.br/index.php
 ${SESSION1}    Nossos Serviços 
-${SESSION2}    Mercado que atuamos 
+${SESSION2}    Mercado que atuamos
 
 *** Test Cases ***
 Abrir Página Exemplo
