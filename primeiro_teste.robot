@@ -15,7 +15,8 @@ Abrir Página Exemplo
 Verificar Texto Visivel
     ${chrome_options}=    Create Chrome Options
     Open Browser    ${URL}    chrome    options=${chrome_options}
-    Element Should Be Visible    ${TEXT}
+    ${element}=    Get Text    css=h2
+    Should Be Equal As Strings    ${element}    Bem vindo a WDA Tecnologia & Inovação.
     [Teardown]    Close Browser
 
 *** Keywords ***
