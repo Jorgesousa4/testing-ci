@@ -15,7 +15,7 @@ Abrir Página Exemplo
 Verificar Texto Visivel
     ${chrome_options}=    Create Chrome Options
     Open Browser    ${URL}    chrome    options=${chrome_options}
-    Element Should Be Visible    xpath=//*[contains(text(), '${TEXT}')]  # Verifica se o texto está visível
+    Element Should Be Visible    xpath=//span[text()="${TEXT}"]  # Verifica se o texto está visível
     [Teardown]    Close Browser
 
 *** Keywords ***
