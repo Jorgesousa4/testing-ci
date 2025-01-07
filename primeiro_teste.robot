@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${URL}    http://wdatecnologia.com.br/novo/
+${URL}    http://www.wdatecnologia.com.br/index.php
 ${TEXT}    Mercado que atuamos 
 
 
@@ -15,7 +15,7 @@ Abrir Página Exemplo
 Verificar Texto Visivel
     ${chrome_options}=    Create Chrome Options
     Open Browser    ${URL}    chrome    options=${chrome_options}
-    Element Should Be Visible    css=h2
+    Element Should Be Visible    Nossos Serviços
     [Teardown]    Close Browser
 
 *** Keywords ***
