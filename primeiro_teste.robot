@@ -2,8 +2,8 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${URL}    https://www.google.com/
-${TEXT}    Pesquisa Google 
+${URL}    http://wdatecnologia.com.br/novo/
+${TEXT}    Início 
 
 
 *** Test Cases ***
@@ -15,8 +15,7 @@ Abrir Página Exemplo
 Verificar Texto Visivel
     ${chrome_options}=    Create Chrome Options
     Open Browser    ${URL}    chrome    options=${chrome_options}
-    ${element}=    Find Element    aria-label=Pesquisa Google
-    Element Should Be Visible    ${element}
+    Element Should Be Visible    ${TEXT}
     [Teardown]    Close Browser
 
 *** Keywords ***
