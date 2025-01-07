@@ -8,6 +8,7 @@ ${CHROME_OPTIONS}    --headless --disable-gpu --no-sandbox --disable-dev-shm-usa
 
 *** Test Cases ***
 Abrir Página Exemplo
-    ${options}=    Create Dictionary    chromeOptions=${CHROME_OPTIONS}
-    Open Browser    ${URL}    ${BROWSER}    options=${options}
+    ${options}=    Create List    ${CHROME_OPTIONS}
+    Create WebDriver    Chrome    options=${options}
+    Go To    ${URL}
     Close Browser
