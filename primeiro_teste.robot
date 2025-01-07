@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${URL}    https://www.exemplo.com
+${URL}    https://www.google.com/
 ${TEXT}    Pesquisa Google 
 
 
