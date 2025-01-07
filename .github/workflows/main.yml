@@ -29,4 +29,4 @@ jobs:
 
     - name: Run Robot Tests
       run: |
-        robot --variable BROWSER:Chrome --variable URL:https://google.com.br --outputdir results primeiro_teste.robot
+        robot --variable BROWSER:Chrome --variable URL:https://google.com.br --outputdir results --variable HEADLESS:true primeiro_teste.robot
