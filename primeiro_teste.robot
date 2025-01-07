@@ -15,7 +15,7 @@ Abrir Página Exemplo
 Verificar Texto Visivel
     ${chrome_options}=    Create Chrome Options
     Open Browser    ${URL}    chrome    options=${chrome_options}
-    Element Should Be Visible    Nossos Serviços
+    Page Should Contain    Nossos Serviços
     [Teardown]    Close Browser
 
 *** Keywords ***
