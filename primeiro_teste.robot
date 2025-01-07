@@ -12,10 +12,16 @@ Abrir Página Exemplo
     Open Browser    ${URL}    chrome    options=${chrome_options}
     [Teardown]    Close Browser
 
-Verificar Texto Visivel
+Verificar Seção de Nossos Serviços Visivel
     ${chrome_options}=    Create Chrome Options
     Open Browser    ${URL}    chrome    options=${chrome_options}
     Page Should Contain    Nossos Serviços
+    [Teardown]    Close Browser
+
+Verificar Seção de Mercado em que atuamos Visivel
+    ${chrome_options}=    Create Chrome Options
+    Open Browser    ${URL}    chrome    options=${chrome_options}
+    Page Should Contain    Mercado em que atuamos
     [Teardown]    Close Browser
 
 *** Keywords ***
