@@ -12,11 +12,10 @@ Abrir Página Exemplo
     Open Browser    ${URL}    chrome    options=${chrome_options}
     [Teardown]    Close Browser
 
-Verificar Se Botão Está Presente
+Verificar Texto Visivel
     ${chrome_options}=    Create Chrome Options
     Open Browser    ${URL}    chrome    options=${chrome_options}
-    ${botao_pesquisa}=    Wait Until Element Is Visible    xpath=//input[@value='Pesquisa Google']    timeout=10s
-    Element Should Be Visible    ${botao_pesquisa}
+    Element Should Be Visible    xpath=//*[contains(text(), '${TEXT}')]  # Verifica se o texto está visível
     [Teardown]    Close Browser
 
 *** Keywords ***
