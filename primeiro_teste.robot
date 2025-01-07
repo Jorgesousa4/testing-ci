@@ -3,11 +3,18 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${URL}    https://www.exemplo.com
+${SEARCH_BUTTON}    name=btnK   # Usando o atributo "name" para localizar o botão
+
 
 *** Test Cases ***
 Abrir Página Exemplo
     ${chrome_options}=    Create Chrome Options
     Open Browser    ${URL}    chrome    options=${chrome_options}
+    [Teardown]    Close Browser
+
+Verificar Se Botão Está Presente
+    Open Browser    ${URL}    chrome
+    Element Should Be Visible    ${SEARCH_BUTTON}  # Verifica se o botão está visível
     [Teardown]    Close Browser
 
 *** Keywords ***
