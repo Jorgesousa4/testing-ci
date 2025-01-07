@@ -20,5 +20,6 @@ jobs:
 
     - name: Run Robot Tests
       run: |
-        robot **/*.robot
+        robot primeiro_teste.robot
+
 
