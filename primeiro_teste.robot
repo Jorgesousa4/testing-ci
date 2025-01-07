@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 *** Variables ***
 ${URL}     https://google.com.br
 ${BROWSER}    Chrome
-${HEADLESS}    ${EMPTY}
+${HEADLESS}    --headless --disable-gpu --no-sandbox
 
 *** Test Cases ***
 Abrir Página Exemplo
