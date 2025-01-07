@@ -4,9 +4,10 @@ Library    SeleniumLibrary
 *** Variables ***
 ${URL}     https://google.com.br
 ${BROWSER}    Chrome
-${OPTIONS}    --headless    --disable-gpu    --no-sandbox    --disable-dev-shm-usage
+${CHROME_OPTIONS}    --headless --disable-gpu --no-sandbox --disable-dev-shm-usage
 
 *** Test Cases ***
 Abrir Página Exemplo
-    Open Browser    ${URL}    ${BROWSER}    options=${OPTIONS}
+    ${options}=    Create List    ${CHROME_OPTIONS}
+    Open Browser    ${URL}    ${BROWSER}    options=${options}
     Close Browser
