@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${URL}    https://www.exemplo.com
-${SEARCH_BUTTON}    name=btnK   # Usando o atributo "name" para localizar o botão
+${TEXT}    Comprou eletrônicos nesse fim de ano?
 
 
 *** Test Cases ***
