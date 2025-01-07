@@ -23,12 +23,9 @@ jobs:
         sudo apt update
         sudo apt install -y google-chrome-stable
 
-    - name: Install ChromeDriver
+    - name: Install ChromeDriver using webdriver-manager
       run: |
-        CHROME_VERSION=$(google-chrome --version | sed 's/[^0-9]*//g')
-        wget https://chromedriver.storage.googleapis.com/${CHROME_VERSION}/chromedriver_linux64.zip
-        unzip chromedriver_linux64.zip
-        sudo mv chromedriver /usr/local/bin/
+        python -m webdriver_manager.chrome
 
     - name: Run Robot Tests
       run: |
