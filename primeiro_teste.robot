@@ -15,7 +15,8 @@ Abrir Página Exemplo
 Verificar Se Botão Está Presente
     ${chrome_options}=    Create Chrome Options
     Open Browser    ${URL}    chrome    options=${chrome_options}
-    Element Should Be Visible    ${SEARCH_BUTTON}  # Verifica se o botão está visível
+    ${botao_pesquisa}=    Wait Until Element Is Visible    xpath=//input[@value='Pesquisa Google']    timeout=10s
+    Element Should Be Visible    ${botao_pesquisa}
     [Teardown]    Close Browser
 
 *** Keywords ***
