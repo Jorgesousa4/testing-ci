@@ -15,7 +15,8 @@ Abrir Página Exemplo
 Verificar Texto Visivel
     ${chrome_options}=    Create Chrome Options
     Open Browser    ${URL}    chrome    options=${chrome_options}
-    Element Text Should Be Visible    css=span    ${TEXT}  # Verifica se o texto está visível dentro de um <span>    
+    Wait Until Element Is Visible    css=span  # Espera até o span estar visível
+    Element Should Contain    css=span    ${TEXT}  # Verifica se o texto está visível dentro do span
     [Teardown]    Close Browser
 
 *** Keywords ***
