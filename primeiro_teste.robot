@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${URL}    https://www.exemplo.com
-${TEXT}    Comprou eletrônicos nesse fim de ano? 
+${TEXT}    Pesquisa Google 
 
 
 *** Test Cases ***
