@@ -15,7 +15,8 @@ Abrir Página Exemplo
 Verificar Texto Visivel
     ${chrome_options}=    Create Chrome Options
     Open Browser    ${URL}    chrome    options=${chrome_options}
-    Element Should Be Visible    aria-label=Pesquisa Google
+    ${element}=    Find Element    aria-label=Pesquisa Google
+    Element Should Be Visible    ${element}
     [Teardown]    Close Browser
 
 *** Keywords ***
